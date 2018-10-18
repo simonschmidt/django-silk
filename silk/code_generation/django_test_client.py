@@ -1,5 +1,3 @@
-import autopep8
-
 import jinja2
 # noinspection PyUnresolvedReferences
 from django.utils.six.moves.urllib.parse import urlencode
@@ -48,6 +46,5 @@ def gen(path,
                      lower_case_method=method,
                      query_params=query_params,
                      content_type=content_type)
-    return autopep8.fix_code(
-        r, options=autopep8.parse_args(['--aggressive', ''])
-    )
+    return r
+
